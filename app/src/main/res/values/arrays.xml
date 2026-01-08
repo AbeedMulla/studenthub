@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Days of Week -->
+    <string-array name="days_of_week">
+        <item>Sunday</item>
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+    </string-array>
+    
+    <string-array name="days_of_week_short">
+        <item>Sun</item>
+        <item>Mon</item>
+        <item>Tue</item>
+        <item>Wed</item>
+        <item>Thu</item>
+        <item>Fri</item>
+        <item>Sat</item>
+    </string-array>
+    
+    <!-- Priority Levels -->
+    <string-array name="priority_levels">
+        <item>Low</item>
+        <item>Medium</item>
+        <item>High</item>
+    </string-array>
+    
+    <!-- Reminder Times (minutes before) -->
+    <string-array name="reminder_times">
+        <item>5 minutes before</item>
+        <item>10 minutes before</item>
+        <item>15 minutes before</item>
+        <item>30 minutes before</item>
+        <item>1 hour before</item>
+    </string-array>
+    
+    <integer-array name="reminder_times_values">
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+    </integer-array>
+    
+    <!-- Focus Duration Options (minutes) -->
+    <string-array name="focus_duration_options">
+        <item>15 minutes</item>
+        <item>20 minutes</item>
+        <item>25 minutes</item>
+        <item>30 minutes</item>
+        <item>45 minutes</item>
+        <item>60 minutes</item>
+    </string-array>
+    
+    <integer-array name="focus_duration_values">
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+        <item>45</item>
+        <item>60</item>
+    </integer-array>
+    
+    <!-- Break Duration Options (minutes) -->
+    <string-array name="break_duration_options">
+        <item>3 minutes</item>
+        <item>5 minutes</item>
+        <item>10 minutes</item>
+        <item>15 minutes</item>
+    </string-array>
+    
+    <integer-array name="break_duration_values">
+        <item>3</item>
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+    </integer-array>
+    
+    <!-- Location Radius Options (meters) -->
+    <string-array name="radius_options">
+        <item>100 meters</item>
+        <item>200 meters</item>
+        <item>300 meters</item>
+        <item>500 meters</item>
+        <item>1 kilometer</item>
+    </string-array>
+    
+    <integer-array name="radius_values">
+        <item>100</item>
+        <item>200</item>
+        <item>300</item>
+        <item>500</item>
+        <item>1000</item>
+    </integer-array>
+    
+    <!-- Mode Options -->
+    <string-array name="mode_options">
+        <item>Auto (Based on Location)</item>
+        <item>Home Mode</item>
+        <item>Campus Mode</item>
+    </string-array>
+</resources>

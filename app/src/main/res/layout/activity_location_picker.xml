@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_arrow_back"
+            app:title="@string/pick_location"
+            app:titleTextColor="@color/text_primary" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/screen_padding"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <!-- Current Location Button -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/use_current_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/corner_radius_md"
+            app:cardElevation="0dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/primary"
+            android:clickable="true"
+            android:focusable="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="@dimen/card_padding">
+
+                <ImageView
+                    android:layout_width="@dimen/icon_size_md"
+                    android:layout_height="@dimen/icon_size_md"
+                    android:src="@drawable/ic_location"
+                    android:tint="@color/primary"
+                    android:contentDescription="Current location" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="@dimen/spacing_md"
+                    android:text="@string/use_current_location"
+                    android:textSize="16sp"
+                    android:textColor="@color/primary"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.progressindicator.CircularProgressIndicator
+                    android:id="@+id/location_progress"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:indeterminate="true"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Divider with OR -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/spacing_lg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/divider" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/spacing_md"
+                android:text="OR"
+                android:textSize="12sp"
+                android:textColor="@color/text_secondary" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/divider" />
+        </LinearLayout>
+
+        <!-- Manual Coordinates -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter coordinates manually"
+            android:textSize="14sp"
+            android:textColor="@color/text_secondary" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_md"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/latitude_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Latitude"
+                style="@style/Widget.StudentHub.TextInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/latitude_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="@dimen/spacing_md"
+                android:layout_height="0dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/longitude_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Longitude"
+                style="@style/Widget.StudentHub.TextInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/longitude_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <!-- Radius Selection -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_lg"
+            android:text="@string/location_radius"
+            android:textSize="14sp"
+            android:textColor="@color/text_secondary" />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/radius_slider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_sm"
+            android:valueFrom="100"
+            android:valueTo="1000"
+            android:value="200"
+            android:stepSize="100"
+            app:labelBehavior="floating" />
+
+        <TextView
+            android:id="@+id/radius_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="200 meters"
+            android:textSize="14sp"
+            android:textColor="@color/text_primary"
+            android:gravity="center" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <!-- Save Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/save_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/save"
+            style="@style/Widget.StudentHub.Button" />
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

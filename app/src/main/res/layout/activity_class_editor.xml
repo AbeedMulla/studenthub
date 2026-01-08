@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_arrow_back"
+            app:title="@string/add_class"
+            app:titleTextColor="@color/text_primary" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/screen_padding">
+
+            <!-- Class Name -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/name_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/class_name"
+                style="@style/Widget.StudentHub.TextInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/name_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Days Selection -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_lg"
+                android:text="@string/class_days"
+                android:textSize="14sp"
+                android:textColor="@color/text_secondary" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/days_chip_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_sm"
+                app:singleSelection="false">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_sun"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sun"
+                    style="@style/Widget.StudentHub.Chip.Choice" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_mon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mon"
+                    style="@style/Widget.StudentHub.Chip.Choice" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_tue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tue"
+                    style="@style/Widget.StudentHub.Chip.Choice" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_wed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/wed"
+                    style="@style/Widget.StudentHub.Chip.Choice" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_thu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/thu"
+                    style="@style/Widget.StudentHub.Chip.Choice" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_fri"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fri"
+                    style="@style/Widget.StudentHub.Chip.Choice" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_sat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sat"
+                    style="@style/Widget.StudentHub.Chip.Choice" />
+            </com.google.android.material.chip.ChipGroup>
+
+            <!-- Time Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_lg"
+                android:orientation="horizontal">
+
+                <!-- Start Time -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/start_time_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/start_time"
+                    style="@style/Widget.StudentHub.TextInputLayout">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/start_time_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:clickable="true" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <View
+                    android:layout_width="@dimen/spacing_md"
+                    android:layout_height="0dp" />
+
+                <!-- End Time -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/end_time_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/end_time"
+                    style="@style/Widget.StudentHub.TextInputLayout">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/end_time_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:clickable="true" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <!-- Location Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_md"
+                android:orientation="horizontal">
+
+                <!-- Building -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/building_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/building"
+                    style="@style/Widget.StudentHub.TextInputLayout">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/building_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <View
+                    android:layout_width="@dimen/spacing_md"
+                    android:layout_height="0dp" />
+
+                <!-- Room -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/room_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/room"
+                    style="@style/Widget.StudentHub.TextInputLayout">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/room_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <!-- Notes -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/notes_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_md"
+                android:hint="@string/notes"
+                style="@style/Widget.StudentHub.TextInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/notes_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:minLines="3"
+                    android:gravity="top" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Save Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/save_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_xl"
+                android:text="@string/save"
+                style="@style/Widget.StudentHub.Button" />
+
+            <!-- Delete Button (only visible in edit mode) -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/delete_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_sm"
+                android:text="@string/delete"
+                android:textColor="@color/error"
+                app:strokeColor="@color/error"
+                style="@style/Widget.StudentHub.Button.Outlined"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

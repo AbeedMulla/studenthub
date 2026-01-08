@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base Light Theme -->
+    <style name="Theme.StudentHub" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Primary colors -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorOnPrimary">@color/on_primary</item>
+        <item name="colorPrimaryContainer">@color/primary_container</item>
+        <item name="colorOnPrimaryContainer">@color/on_primary_container</item>
+
+        <!-- Secondary colors -->
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorOnSecondary">@color/on_secondary</item>
+        <item name="colorSecondaryContainer">@color/secondary_container</item>
+        <item name="colorOnSecondaryContainer">@color/on_secondary_container</item>
+
+        <!-- Tertiary colors -->
+        <item name="colorTertiary">@color/tertiary</item>
+        <item name="colorOnTertiary">@color/on_tertiary</item>
+
+        <!-- Background and surface -->
+        <item name="android:colorBackground">@color/background</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/on_surface</item>
+        <item name="colorSurfaceVariant">@color/surface_variant</item>
+        <item name="colorOnSurfaceVariant">@color/on_surface_variant</item>
+
+        <!-- Error colors -->
+        <item name="colorError">@color/error</item>
+        <item name="colorOnError">@color/on_error</item>
+
+        <!-- Status bar -->
+        <item name="android:statusBarColor">@color/background</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+        <!-- Navigation bar -->
+        <item name="android:navigationBarColor">@color/background</item>
+        <item name="android:windowLightNavigationBar">true</item>
+    </style>
+
+    <!-- Dark Theme -->
+    <style name="Theme.StudentHub.Dark" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorOnPrimary">@color/on_primary</item>
+        <item name="colorPrimaryContainer">@color/primary_container</item>
+        <item name="colorOnPrimaryContainer">@color/on_primary_container</item>
+
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorOnSecondary">@color/on_secondary</item>
+        <item name="colorSecondaryContainer">@color/secondary_container</item>
+        <item name="colorOnSecondaryContainer">@color/on_secondary_container</item>
+
+        <item name="colorTertiary">@color/tertiary</item>
+        <item name="colorOnTertiary">@color/on_tertiary</item>
+
+        <item name="android:colorBackground">@color/background</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/on_surface</item>
+        <item name="colorSurfaceVariant">@color/surface_variant</item>
+        <item name="colorOnSurfaceVariant">@color/on_surface_variant</item>
+
+        <item name="colorError">@color/error</item>
+        <item name="colorOnError">@color/on_error</item>
+
+        <item name="android:statusBarColor">@color/background</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:navigationBarColor">@color/background</item>
+        <item name="android:windowLightNavigationBar">false</item>
+    </style>
+
+    <!-- Button Style -->
+    <style name="Widget.StudentHub.Button" parent="Widget.Material3.Button">
+        <item name="android:textAllCaps">false</item>
+        <item name="cornerRadius">@dimen/corner_radius_md</item>
+    </style>
+
+    <!-- Outlined Button Style -->
+    <style name="Widget.StudentHub.Button.Outlined" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:textAllCaps">false</item>
+        <item name="cornerRadius">@dimen/corner_radius_md</item>
+    </style>
+
+    <!-- Text Button Style -->
+    <style name="Widget.StudentHub.Button.Text" parent="Widget.Material3.Button.TextButton">
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <!-- TextInputLayout Style -->
+    <style name="Widget.StudentHub.TextInputLayout" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusTopStart">@dimen/corner_radius_sm</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/corner_radius_sm</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/corner_radius_sm</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/corner_radius_sm</item>
+    </style>
+
+    <!-- Card Style -->
+    <style name="Widget.StudentHub.Card" parent="Widget.Material3.CardView.Filled">
+        <item name="cardCornerRadius">@dimen/corner_radius_md</item>
+        <item name="cardElevation">@dimen/elevation_sm</item>
+    </style>
+
+    <!-- Chip Choice Style -->
+    <style name="Widget.StudentHub.Chip.Choice" parent="Widget.Material3.Chip.Filter">
+    </style>
+
+    <!-- Chip Filter Style -->
+    <style name="Widget.StudentHub.Chip.Filter" parent="Widget.Material3.Chip.Filter">
+    </style>
+
+    <!-- Bottom Navigation Style -->
+    <style name="Widget.StudentHub.BottomNav" parent="Widget.Material3.BottomNavigationView">
+        <item name="labelVisibilityMode">labeled</item>
+    </style>
+
+    <!-- Dialog Style -->
+    <style name="Widget.StudentHub.Dialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.StudentHub.Dialog</item>
+    </style>
+
+    <!-- Shape Appearances -->
+    <style name="ShapeAppearance.StudentHub.Small" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerSize">@dimen/corner_radius_sm</item>
+    </style>
+
+    <style name="ShapeAppearance.StudentHub.Medium" parent="ShapeAppearance.Material3.MediumComponent">
+        <item name="cornerSize">@dimen/corner_radius_md</item>
+    </style>
+
+    <style name="ShapeAppearance.StudentHub.Large" parent="ShapeAppearance.Material3.LargeComponent">
+        <item name="cornerSize">@dimen/corner_radius_lg</item>
+    </style>
+
+    <style name="ShapeAppearance.StudentHub.Dialog" parent="">
+        <item name="cornerSize">@dimen/corner_radius_lg</item>
+    </style>
+
+</resources>

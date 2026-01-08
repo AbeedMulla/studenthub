@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Offline Banner -->
+        <LinearLayout
+            android:id="@+id/offline_banner"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/offline_banner_height"
+            android:background="@drawable/bg_offline_banner"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/spacing_md"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="@dimen/icon_size_sm"
+                android:layout_height="@dimen/icon_size_sm"
+                android:src="@drawable/ic_cloud_off"
+                android:contentDescription="@string/mode_offline" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_sm"
+                android:text="@string/offline_banner"
+                android:textColor="@color/offline_banner_text"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <!-- Fragment Container -->
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <!-- Bottom Navigation -->
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/surface"
+            app:menu="@menu/bottom_nav_menu"
+            app:labelVisibilityMode="labeled" />
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

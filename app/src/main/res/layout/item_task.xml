@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingVertical="@dimen/spacing_sm"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true">
+
+    <!-- Checkbox -->
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!-- Content -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart="@dimen/spacing_sm"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Task title"
+            android:textSize="15sp"
+            android:textColor="@color/text_primary"
+            android:maxLines="2"
+            android:ellipsize="end" />
+
+        <LinearLayout
+            android:id="@+id/details_row"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="2dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/due_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Due today"
+                android:textSize="12sp"
+                android:textColor="@color/text_secondary" />
+
+            <TextView
+                android:id="@+id/tags"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_sm"
+                android:text="#work"
+                android:textSize="12sp"
+                android:textColor="@color/primary" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

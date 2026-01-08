@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:padding="@dimen/screen_padding">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingVertical="@dimen/spacing_xxl">
+
+            <!-- App Icon/Logo -->
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ic_campus"
+                android:tint="@color/primary"
+                android:contentDescription="@string/app_name" />
+
+            <!-- App Name -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_md"
+                android:text="@string/app_name"
+                android:textSize="28sp"
+                android:textColor="@color/text_primary"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_sm"
+                android:text="Your context-aware student assistant"
+                android:textSize="14sp"
+                android:textColor="@color/text_secondary" />
+
+            <!-- Login Form -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_xl"
+                app:cardCornerRadius="@dimen/corner_radius_md"
+                app:cardElevation="0dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/card_stroke">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/card_padding">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/login"
+                        android:textSize="20sp"
+                        android:textColor="@color/text_primary"
+                        android:textStyle="bold" />
+
+                    <!-- Email Input -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/email_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_lg"
+                        android:hint="@string/email"
+                        app:startIconDrawable="@drawable/ic_notification"
+                        style="@style/Widget.StudentHub.TextInputLayout">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/email_input"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textEmailAddress"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Password Input -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/password_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_md"
+                        android:hint="@string/password"
+                        app:endIconMode="password_toggle"
+                        style="@style/Widget.StudentHub.TextInputLayout">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/password_input"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPassword"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Login Button -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/login_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_lg"
+                        android:text="@string/login"
+                        style="@style/Widget.StudentHub.Button" />
+
+                    <!-- Loading Indicator -->
+                    <com.google.android.material.progressindicator.CircularProgressIndicator
+                        android:id="@+id/loading_indicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/spacing_md"
+                        android:indeterminate="true"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Register Link -->
+            <TextView
+                android:id="@+id/register_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_lg"
+                android:text="@string/no_account"
+                android:textColor="@color/primary"
+                android:textSize="14sp"
+                android:padding="@dimen/spacing_sm" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

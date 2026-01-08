@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/screen_padding">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/schedule"
+                android:textSize="24sp"
+                android:textColor="@color/text_primary"
+                android:textStyle="bold" />
+
+            <!-- Tab Layout for Today/Week -->
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/view_tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_md"
+                app:tabMode="fixed"
+                app:tabGravity="fill"
+                app:tabIndicatorColor="@color/primary"
+                app:tabSelectedTextColor="@color/primary"
+                app:tabTextColor="@color/text_secondary"
+                app:tabBackground="@color/surface"
+                app:tabIndicatorFullWidth="false">
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/today_view" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/week_view" />
+            </com.google.android.material.tabs.TabLayout>
+        </LinearLayout>
+
+        <!-- View Pager for Today/Week views -->
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <!-- FAB to Add Class -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add_class"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/spacing_md"
+        android:src="@drawable/ic_add"
+        android:contentDescription="@string/add_class"
+        app:backgroundTint="@color/primary"
+        app:tint="@android:color/white" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

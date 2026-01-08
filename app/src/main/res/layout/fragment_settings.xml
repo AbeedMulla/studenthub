@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/screen_padding">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/settings"
+            android:textSize="24sp"
+            android:textColor="@color/text_primary"
+            android:textStyle="bold" />
+
+        <!-- Account Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_lg"
+            android:text="@string/account"
+            android:textSize="14sp"
+            android:textColor="@color/primary"
+            android:textStyle="bold" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_sm"
+            app:cardCornerRadius="@dimen/corner_radius_md"
+            app:cardElevation="0dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/card_stroke">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- User Email -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/card_padding">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_notification"
+                        android:tint="@color/primary"
+                        android:padding="8dp"
+                        android:background="@drawable/bg_badge"
+                        android:backgroundTint="@color/surface_variant"
+                        android:contentDescription="User" />
+
+                    <TextView
+                        android:id="@+id/user_email"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="@dimen/spacing_md"
+                        android:text="user@example.com"
+                        android:textSize="16sp"
+                        android:textColor="@color/text_primary" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider" />
+
+                <!-- Logout -->
+                <LinearLayout
+                    android:id="@+id/logout_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/card_padding"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="@dimen/icon_size_md"
+                        android:layout_height="@dimen/icon_size_md"
+                        android:src="@drawable/ic_logout"
+                        android:contentDescription="Logout" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_md"
+                        android:text="@string/logout"
+                        android:textSize="16sp"
+                        android:textColor="@color/error" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Appearance Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_lg"
+            android:text="@string/appearance"
+            android:textSize="14sp"
+            android:textColor="@color/primary"
+            android:textStyle="bold" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_sm"
+            app:cardCornerRadius="@dimen/corner_radius_md"
+            app:cardElevation="0dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/card_stroke">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="@dimen/card_padding">
+
+                <ImageView
+                    android:layout_width="@dimen/icon_size_md"
+                    android:layout_height="@dimen/icon_size_md"
+                    android:src="@drawable/ic_dark_mode"
+                    android:contentDescription="Dark mode" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="@dimen/spacing_md"
+                    android:text="@string/dark_mode"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_primary" />
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/dark_mode_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Notifications Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_lg"
+            android:text="@string/notifications_settings"
+            android:textSize="14sp"
+            android:textColor="@color/primary"
+            android:textStyle="bold" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_sm"
+            app:cardCornerRadius="@dimen/corner_radius_md"
+            app:cardElevation="0dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/card_stroke">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Class Reminder Time -->
+                <LinearLayout
+                    android:id="@+id/class_reminder_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/card_padding"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/class_reminders"
+                            android:textSize="16sp"
+                            android:textColor="@color/text_primary" />
+
+                        <TextView
+                            android:id="@+id/class_reminder_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="15 minutes before"
+                            android:textSize="14sp"
+                            android:textColor="@color/text_secondary" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="@dimen/icon_size_md"
+                        android:layout_height="@dimen/icon_size_md"
+                        android:src="@drawable/ic_chevron_right"
+                        android:contentDescription="Select" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider" />
+
+                <!-- Assignment Due Tomorrow -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/card_padding">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/due_tomorrow_reminder"
+                        android:textSize="16sp"
+                        android:textColor="@color/text_primary" />
+
+                    <com.google.android.material.materialswitch.MaterialSwitch
+                        android:id="@+id/due_tomorrow_switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider" />
+
+                <!-- Due in 1 Hour -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/card_padding">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/due_hour_reminder"
+                        android:textSize="16sp"
+                        android:textColor="@color/text_primary" />
+
+                    <com.google.android.material.materialswitch.MaterialSwitch
+                        android:id="@+id/due_hour_switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider" />
+
+                <!-- Quiet Hours -->
+                <LinearLayout
+                    android:id="@+id/quiet_hours_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/card_padding"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/quiet_hours"
+                            android:textSize="16sp"
+                            android:textColor="@color/text_primary" />
+
+                        <TextView
+                            android:id="@+id/quiet_hours_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="10:00 PM - 7:00 AM"
+                            android:textSize="14sp"
+                            android:textColor="@color/text_secondary" />
+                    </LinearLayout>
+
+                    <com.google.android.material.materialswitch.MaterialSwitch
+                        android:id="@+id/quiet_hours_switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Location Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_lg"
+            android:text="@string/location_settings"
+            android:textSize="14sp"
+            android:textColor="@color/primary"
+            android:textStyle="bold" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_sm"
+            app:cardCornerRadius="@dimen/corner_radius_md"
+            app:cardElevation="0dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/card_stroke">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Home Location -->
+                <LinearLayout
+                    android:id="@+id/home_location_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/card_padding"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="@dimen/icon_size_md"
+                        android:layout_height="@dimen/icon_size_md"
+                        android:src="@drawable/ic_home_location"
+                        android:tint="@color/mode_home"
+                        android:contentDescription="Home" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="@dimen/spacing_md"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/home_location"
+                            android:textSize="16sp"
+                            android:textColor="@color/text_primary" />
+
+                        <TextView
+                            android:id="@+id/home_location_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/set_location"
+                            android:textSize="14sp"
+                            android:textColor="@color/text_secondary" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="@dimen/icon_size_md"
+                        android:layout_height="@dimen/icon_size_md"
+                        android:src="@drawable/ic_chevron_right"
+                        android:contentDescription="Select" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider" />
+
+                <!-- Campus Location -->
+                <LinearLayout
+                    android:id="@+id/campus_location_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/card_padding"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="@dimen/icon_size_md"
+                        android:layout_height="@dimen/icon_size_md"
+                        android:src="@drawable/ic_campus"
+                        android:tint="@color/mode_campus"
+                        android:contentDescription="Campus" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="@dimen/spacing_md"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/campus_location"
+                            android:textSize="16sp"
+                            android:textColor="@color/text_primary" />
+
+                        <TextView
+                            android:id="@+id/campus_location_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/set_location"
+                            android:textSize="14sp"
+                            android:textColor="@color/text_secondary" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="@dimen/icon_size_md"
+                        android:layout_height="@dimen/icon_size_md"
+                        android:src="@drawable/ic_chevron_right"
+                        android:contentDescription="Select" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider" />
+
+                <!-- Manual Mode Override -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/card_padding">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/manual_mode"
+                            android:textSize="16sp"
+                            android:textColor="@color/text_primary" />
+
+                        <TextView
+                            android:id="@+id/current_mode_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Auto"
+                            android:textSize="14sp"
+                            android:textColor="@color/text_secondary" />
+                    </LinearLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/mode_toggle_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Change"
+                        android:textSize="12sp"
+                        style="@style/Widget.StudentHub.Button.Outlined" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Sync Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_lg"
+            android:text="@string/sync"
+            android:textSize="14sp"
+            android:textColor="@color/primary"
+            android:textStyle="bold" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_sm"
+            app:cardCornerRadius="@dimen/corner_radius_md"
+            app:cardElevation="0dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/card_stroke">
+
+            <LinearLayout
+                android:id="@+id/sync_now_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="@dimen/card_padding"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="@dimen/icon_size_md"
+                    android:layout_height="@dimen/icon_size_md"
+                    android:src="@drawable/ic_sync"
+                    android:contentDescription="Sync" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="@dimen/spacing_md"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sync_now"
+                        android:textSize="16sp"
+                        android:textColor="@color/text_primary" />
+
+                    <TextView
+                        android:id="@+id/last_sync_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/never_synced"
+                        android:textSize="14sp"
+                        android:textColor="@color/text_secondary" />
+                </LinearLayout>
+
+                <com.google.android.material.progressindicator.CircularProgressIndicator
+                    android:id="@+id/sync_progress"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:indeterminate="true"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Version -->
+        <TextView
+            android:id="@+id/version_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xl"
+            android:gravity="center"
+            android:text="Version 1.0"
+            android:textSize="12sp"
+            android:textColor="@color/text_disabled" />
+
+    </LinearLayout>
+</ScrollView>

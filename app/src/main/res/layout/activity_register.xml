@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:padding="@dimen/screen_padding">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingVertical="@dimen/spacing_xl">
+
+            <!-- Back Button -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/back_button"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_arrow_back"
+                    android:contentDescription="Back" />
+            </LinearLayout>
+
+            <!-- Header -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_md"
+                android:text="Create Account"
+                android:textSize="28sp"
+                android:textColor="@color/text_primary"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_sm"
+                android:text="Join StudentHub today"
+                android:textSize="14sp"
+                android:textColor="@color/text_secondary" />
+
+            <!-- Register Form -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_lg"
+                app:cardCornerRadius="@dimen/corner_radius_md"
+                app:cardElevation="0dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/card_stroke">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/card_padding">
+
+                    <!-- Email Input -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/email_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/email"
+                        style="@style/Widget.StudentHub.TextInputLayout">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/email_input"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textEmailAddress"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Password Input -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/password_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_md"
+                        android:hint="@string/password"
+                        app:endIconMode="password_toggle"
+                        app:helperText="At least 6 characters"
+                        style="@style/Widget.StudentHub.TextInputLayout">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/password_input"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPassword"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Confirm Password Input -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/confirm_password_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_md"
+                        android:hint="@string/confirm_password"
+                        app:endIconMode="password_toggle"
+                        style="@style/Widget.StudentHub.TextInputLayout">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/confirm_password_input"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPassword"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Register Button -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/register_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_lg"
+                        android:text="@string/register"
+                        style="@style/Widget.StudentHub.Button" />
+
+                    <!-- Loading Indicator -->
+                    <com.google.android.material.progressindicator.CircularProgressIndicator
+                        android:id="@+id/loading_indicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/spacing_md"
+                        android:indeterminate="true"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Login Link -->
+            <TextView
+                android:id="@+id/login_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_lg"
+                android:text="@string/have_account"
+                android:textColor="@color/primary"
+                android:textSize="14sp"
+                android:padding="@dimen/spacing_sm" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

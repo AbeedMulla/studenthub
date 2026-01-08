@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary colors (Dark) -->
+    <color name="primary">#A8C7FA</color>
+    <color name="on_primary">#003258</color>
+    <color name="primary_container">#004881</color>
+    <color name="on_primary_container">#D1E4FF</color>
+
+    <!-- Secondary colors (Dark) -->
+    <color name="secondary">#CCC2DC</color>
+    <color name="on_secondary">#332D41</color>
+    <color name="secondary_container">#4A4458</color>
+    <color name="on_secondary_container">#E8DEF8</color>
+
+    <!-- Tertiary colors (Dark) -->
+    <color name="tertiary">#EFB8C8</color>
+    <color name="on_tertiary">#492532</color>
+    <color name="tertiary_container">#633B48</color>
+    <color name="on_tertiary_container">#FFD8E4</color>
+
+    <!-- Background and surface (Dark) -->
+    <color name="background">#1C1B1F</color>
+    <color name="on_background">#E6E1E5</color>
+    <color name="surface">#1C1B1F</color>
+    <color name="on_surface">#E6E1E5</color>
+    <color name="surface_variant">#49454F</color>
+    <color name="on_surface_variant">#CAC4D0</color>
+
+    <!-- Error colors (Dark) -->
+    <color name="error">#F2B8B5</color>
+    <color name="on_error">#601410</color>
+    <color name="error_container">#8C1D18</color>
+    <color name="on_error_container">#F9DEDC</color>
+
+    <!-- Outline (Dark) -->
+    <color name="outline">#938F99</color>
+    <color name="outline_variant">#49454F</color>
+
+    <!-- Text colors (Dark) -->
+    <color name="text_primary">#E6E1E5</color>
+    <color name="text_secondary">#CAC4D0</color>
+    <color name="text_disabled">#E6E1E5</color>
+
+    <!-- Priority colors -->
+    <color name="priority_high">#EF5350</color>
+    <color name="priority_medium">#FFB74D</color>
+    <color name="priority_low">#66BB6A</color>
+
+    <!-- Status colors -->
+    <color name="success">#66BB6A</color>
+    <color name="warning">#FFB74D</color>
+    <color name="info">#64B5F6</color>
+
+    <!-- Focus mode colors -->
+    <color name="focus_active">#EF5350</color>
+    <color name="break_active">#66BB6A</color>
+
+    <!-- Mode colors -->
+    <color name="mode_home">#66BB6A</color>
+    <color name="mode_campus">#64B5F6</color>
+    <color name="mode_offline">#BDBDBD</color>
+
+    <!-- Navigation colors -->
+    <color name="nav_selected">#A8C7FA</color>
+    <color name="nav_unselected">#CAC4D0</color>
+
+    <!-- Card colors (Dark) -->
+    <color name="card_background">#2D2D30</color>
+    <color name="card_stroke">#49454F</color>
+
+    <!-- Divider (Dark) -->
+    <color name="divider">#49454F</color>
+
+    <!-- Ripple (Dark) -->
+    <color name="ripple">#1FA8C7FA</color>
+
+    <!-- Offline banner colors (Dark) -->
+    <color name="offline_banner_background">#3E2723</color>
+    <color name="offline_banner_text">#FFAB91</color>
+</resources>

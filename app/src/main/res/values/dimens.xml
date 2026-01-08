@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Spacing -->
+    <dimen name="spacing_xs">4dp</dimen>
+    <dimen name="spacing_sm">8dp</dimen>
+    <dimen name="spacing_md">16dp</dimen>
+    <dimen name="spacing_lg">24dp</dimen>
+    <dimen name="spacing_xl">32dp</dimen>
+    <dimen name="spacing_xxl">48dp</dimen>
+    
+    <!-- Padding -->
+    <dimen name="screen_padding">16dp</dimen>
+    <dimen name="card_padding">16dp</dimen>
+    <dimen name="list_item_padding">12dp</dimen>
+    
+    <!-- Corner Radius -->
+    <dimen name="corner_radius_sm">8dp</dimen>
+    <dimen name="corner_radius_md">12dp</dimen>
+    <dimen name="corner_radius_lg">16dp</dimen>
+    <dimen name="corner_radius_xl">24dp</dimen>
+    
+    <!-- Icon Sizes -->
+    <dimen name="icon_size_sm">20dp</dimen>
+    <dimen name="icon_size_md">24dp</dimen>
+    <dimen name="icon_size_lg">32dp</dimen>
+    <dimen name="icon_size_xl">48dp</dimen>
+    
+    <!-- Button -->
+    <dimen name="button_min_height">48dp</dimen>
+    <dimen name="fab_size">56dp</dimen>
+    
+    <!-- Elevation -->
+    <dimen name="elevation_sm">2dp</dimen>
+    <dimen name="elevation_md">4dp</dimen>
+    <dimen name="elevation_lg">8dp</dimen>
+    
+    <!-- Bottom Navigation -->
+    <dimen name="bottom_nav_height">80dp</dimen>
+    
+    <!-- Toolbar -->
+    <dimen name="toolbar_height">56dp</dimen>
+    
+    <!-- Card -->
+    <dimen name="card_elevation">2dp</dimen>
+    <dimen name="card_margin">8dp</dimen>
+    
+    <!-- Focus Timer -->
+    <dimen name="focus_timer_size">240dp</dimen>
+    <dimen name="focus_timer_stroke">8dp</dimen>
+    
+    <!-- Offline Banner -->
+    <dimen name="offline_banner_height">40dp</dimen>
+    
+    <!-- List Item -->
+    <dimen name="list_item_min_height">56dp</dimen>
+    
+    <!-- Badge -->
+    <dimen name="badge_corner_radius">4dp</dimen>
+    
+    <!-- Divider -->
+    <dimen name="divider_height">1dp</dimen>
+</resources>
